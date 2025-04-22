@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+<center>
+  <label for="value_a">Value A: </label>
+  <input type="number" id="value_a">
+  <br>
+  <br>
+  <label for="value_b">Value B: </label>
+  <input type="number" id="value_b">
+  <br>
+  <br>
+  <label for="value_c">Value C: </label>
+  <input type="number" id="value_c">
+  <br>
+  <br>
+  <label for="value_d">Value D: </label>
+  <input type="number" id="value_d">
+  <br>
+  <br>
+  <input type="button" value="Sum" id="btn_sum">
+  <hr>
+  <h1 id="label_result">Result: 10</h1>
+</center>
+</body>
+
+<script>
+  let input_a = document.getElementById('value_a')
+  let input_b = document.getElementById('value_b')
+  let input_c = document.getElementById('value_c')
+  let input_d = document.getElementById('value_d')
+  let btn_sum = document.getElementById('btn_sum')
+  let label_result = document.getElementById('label_result')
+
+  btn_sum.addEventListener('click', function (){
+      let a = parseFloat(input_a.value)
+      let b = parseFloat(input_b.value)
+      let c = parseFloat(input_c.value)
+      let d = parseFloat(input_d.value)
+      let s = a + b + c + d
+      label_result.innerText = 'Result: '+s.toLocaleString()
+  })
+
+</script>
+
+</html>
